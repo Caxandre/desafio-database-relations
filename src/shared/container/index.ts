@@ -9,4 +9,26 @@ import ProductsRepository from '@modules/products/infra/typeorm/repositories/Pro
 import IOrdersRepository from '@modules/orders/repositories/IOrdersRepository';
 import OrdersRepository from '@modules/orders/infra/typeorm/repositories/OrdersRepository';
 
+import IOrdersProductsRepository from '@modules/orders/repositories/IOrdersProductsRepository';
+import OrdersProductsRepository from '@modules/orders/infra/typeorm/repositories/OrdersProductsRepository';
+
 // TODO
+container.registerSingleton<ICustomersRepository>(
+  'CustomersRepository',
+  CustomersRepository,
+);
+
+container.registerSingleton<IProductsRepository>(
+  'ProductsRepository',
+  ProductsRepository,
+);
+
+container.registerSingleton<IOrdersRepository>(
+  'OrdersRepository',
+  OrdersRepository,
+);
+
+container.registerSingleton<IOrdersProductsRepository>(
+  'OrdersProductsRepository',
+  OrdersProductsRepository,
+);
